@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+}
+
+.page{
+background: url(/frame1/image/image.jpg)no-repeat;
+background-size: cover;
+width: 100%;
+}
+
+.header{}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 135px;
+}
+
+.logo{
+    margin-left: 80px;
+    margin-top:58px;
+}
+
+.logo-mb{  
+    display: none;
+}
+
+
+.menu{      
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+    height: 100px;
+    list-style-type: none; 
+}
+
+.menu__item{}
+
+.link{
+    color: #4781ED;
+    text-decoration: none;
+    margin: 0 58px;
+    font-family: sans-serif;/*поменять*/
+    font-weight: bold;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.menu__link{
+    text-decoration: none;
+    color:white;
+    margin: 0 58px;
+    font-family: sans-serif;/*поменять*/
+    font-weight: bold;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+}
+
+.menu__link_radius{
+    border:1px solid white;
+    border-radius: 90px;
+    color:#4781ED;
+    background: white;
+    padding: 18px;
+    margin: 0 100px 0 0
+    
+}
+
+/* Начала burger-menu */
+
+.icon{
+    display:none;
+    width: 32px;
+    height: 25px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 2s ease-in-out;
+    cursor: pointer;
+}
+
+.icon .span{
+    display: block;
+    position: absolute;
+    height:3px;
+    width: 100%;
+    background:white;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ;
+}
+
+.icon .sp1{
+    top:0px;
+    transform-origin: left center;
+}
+
+.icon .sp2{
+    top:9px;
+    transform-origin: left center;
+}
+
+.icon .sp3{
+  top: 18px;
+  transform-origin: left center;
+}
+
+/* конец burger-menu */
+
+.section{
+}
+
+.block-section{
+    margin: 242px 1142px 210px 354px;
+}
+
+
+.block-section__title{
+    font-family: Arial;
+    color:white;
+    width: 418px;
+    height: 292px;
+    line-height: 96px;
+    font-size: 96px;
+    letter-spacing: -0.01em;  
+}
+
+.info{}
+
+.info-menu{
+    display: flex;
+    flex-direction: row;
+    margin: 0 360px 0 297px;
+}
+
+
+.info-menu__item{
+    display:flex;
+    align-items:center;
+    width: 250px;
+    height: 54px;
+    margin-right: 104px;
+    list-style-type: none;
+    line-height: 22px;
+    font-size: 18px;
+    font-family: cursive;
+    color: white;
+}
+
+.info-menu__icon{
+   margin-right: 20px;
+}
+
+.info-menu__phone{
+    display: flex;
+    align-items: center;
+    width: 144px;
+}
+
+.info-menu__copyright{
+    margin-left: 7px;
+    width: 186px;
+    height: 45px;
+    line-height: 15px;
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+@media screen and (max-width: 1440px) {
+    body{
+        width: 100%;
+    }   
+
+    .header-nav{
+        margin-bottom: 0;
+}
+    
+    .block-section{
+        margin: 124px 876px 117px 175px;
+    }
+    
+    .block-section__title{
+        font-size: 88px;
+    }
+    
+    .info{
+        width:100%;   
+    }
+    
+   .info-menu{
+        margin: 0 208px 0 117px;
+    }
+    
+    .info-menu__item{
+        margin-right: 62px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+    .page{
+        background: url(/frame1/image/image2.jpg)no-repeat center fixed;
+        background-size: cover;
+    } 
+    
+    .header-nav{
+        width: 840px;
+        margin: 87px 92px 0 29px;
+    }  
+    
+    .icon{
+        display: inline-block;
+    }
+    
+    
+     .menu__link{
+        display: none;
+    }
+    
+    
+     .block-section{
+        margin: 448px 514px 416px 88px;
+    }
+    
+    .info{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 375px)  {
+    
+        .page{
+            background: url(/frame1/image/image3.jpg)no-repeat center fixed;
+            background-size: cover;
+        } 
+    
+       .header-nav{
+            display: flex;
+            align-items:flex-end;
+            justify-content: space-around;
+            width: 311px;
+            height: 27px;
+            margin: 32px 32px 0 32px;
+        } 
+    
+    
+        .logo{
+            display: none;
+        }
+    
+        .logo-mb{
+            display: block;
+            width: 83px;
+            height: 27px;
+            margin-left: 32px;
+            margin-right: 180px;
+        }
+    
+        .icon{
+            margin-top: 32px;
+            margin-right: 32px;
+         }
+        
+        .menu{
+            padding: 0;
+        }
+        
+            .block-section{
+            margin: 192px 99px 210px 29px;
+        }
+    
+        .block-section__title{
+            width: 204px;
+            height: 204px;
+            line-height: 68px;
+            font-size: 56px;
+            letter-spacing: -0.01em;
+        }
+        
+}    
+
+
+    
