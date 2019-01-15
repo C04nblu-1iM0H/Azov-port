@@ -1,13 +1,33 @@
-*{
-    margin: 0;
+@font-face{
+    font-family: "Circe";
+    src: url(/font/Circe-Light.eot) format("eot"), 
+         url(/font/Circe-Light.woff) format("woff"),
+         url(/font/Circe-Light.ttf) format("truetype"),
+         url(/font/Circe-Light.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Circe-Bold";
+    src: url(/font/Circe-Bold.eot) format("eot"), 
+         url(/font/Circe-Bold.woff) format("woff"),
+         url(/font/Circe-Bold.ttf) format("truetype"),
+         url(/font/Circe-Bold.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
 }
 
 .header{}
-
 .header-nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 174px;
+    margin-bottom: 158px;
+    white-space: nowrap;
 }
 
 .logo{
@@ -15,16 +35,23 @@
     margin-top:58px;
 }
 
-.logo-mb{
+.logo_mb{
     display: none;
 }
 
 
 .menu{      
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    padding: 0;
+    -webkit-box-align:end;
+    -ms-flex-align:end;
     align-items:flex-end;
-    height: 100px;
+    height: 79px;
     list-style-type: none; 
 }
 
@@ -34,7 +61,7 @@
     color: #4781ED;
     text-decoration: none;
     margin: 0 58px;
-    font-family: sans-serif;/*поменять*/
+    font-family: "Circe-Bold";
     font-weight: bold;
     line-height: normal;
     font-size: 15px;
@@ -46,7 +73,7 @@
     text-decoration: none;
     color:#2E2E2E;
     margin: 0 58px;
-    font-family: sans-serif;/*поменять*/
+        font-family: "Circe-Bold";
     font-weight: bold;
     line-height: normal;
     font-size: 15px;
@@ -56,23 +83,22 @@
 }
 
 .menu__link_radius{
-    border:1px solid #4781ED;
-    border-radius: 90px;
+    border-radius: 100%;
     color:white;
     background: #4781ED;
-    padding: 18px;
-    margin: 0 100px 0 0
-    
+    padding : 18px 18px;
+    margin: 0 100px 0 0  
 }
-
 /* Начала burger-menu */
 
 .icon{
     display:none;
     width: 32px;
     height: 25px;
-    position: relative;
+    position: absolute;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
     cursor: pointer;
 }
@@ -84,23 +110,25 @@
     width: 100%;
     background:#2E2E2E;
     left: 0;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: .25s ;
     transition: .25s ;
 }
 
 .icon .sp1{
-    top:0px;
-    transform-origin: left center;
+    top:0;
+    -webkit-transform-origin: left center;transform-origin: left center;
 }
 
 .icon .sp2{
     top:9px;
-    transform-origin: left center;
+    -webkit-transform-origin: left center;transform-origin: left center;
 }
 
 .icon .sp3{
   top: 18px;
-  transform-origin: left center;
+  -webkit-transform-origin: left center;transform-origin: left center;
 }
 
 /* конец burger-menu */
@@ -109,14 +137,15 @@
 
 .page{}
 
-.wrap{
-    max-width: 1920px;
-    margin: 0 676px 0 353px;
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 
-.title{
+.title_1{
+        font-family: "Circe-Bold";
     font-size: 72px;
     letter-spacing: -0.01em;
     color: #2E2E2E;
@@ -124,19 +153,30 @@
 }
 
 .contacts-block1{
-    margin: 0 676px 72px 353px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-bottom: 72px;
 }
 
 .contacts-block2{
-    margin: 0 676px 243px 353px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
-.title__h3{
-    font-family: Circe;
+.title_3{
+        font-family: "Circe-Bold";
     line-height: normal;
     font-size: 28px;
     letter-spacing: -0.01em;
@@ -145,7 +185,7 @@
 }
 
 .text{
-   font-family: Circe;
+    font-family: "Circe";
     line-height: 34px;
     font-size: 22px;
     color: #2E2E2E; 
@@ -153,13 +193,17 @@
 
 
 .block-text{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .block-text__color{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 48px;
-    font-family: Circe;
+    font-family: "Circe";
     line-height: 34px;
     font-size: 22px;
     color: #4781ED;
@@ -167,22 +211,25 @@
 
 @media screen and (max-width: 1440px) {
     .title{
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
-    .logo-mb2{
+    .logo_mb{
             display: none;
     }
     
-    .wrap{
-       margin: 0 957px 0 174px; 
+    .wrapper{
+       max-width: 1100px;
+        margin: 0 auto;
     }
     
     .contacts-block1{
-        margin: 0 429px 72px 181px;
+        max-width: 1100px;
+        margin: 42px auto;
     }
     
     .contacts-block2{
-        margin: 0 443px 72px 181px;
+        max-width: 1100px;
+        margin: 0 auto;
     }
 }
 
@@ -190,31 +237,42 @@
 @media screen and (max-width:1024px) {
     
     .header-nav{
-        width: 840px;
-        margin: 87px 92px 148px 29px;
+        max-width: 824px;
+        margin: 0 auto;
+        margin-bottom: 337px;
     }    
+    
+    .logo{
+        margin-left: 0;
+        margin-top: 87px;
+    }
     
     .menu__item{
         display: none;
     }
-        .logo-mb2{
-            display: none;
-        }
     
-    .icon{
-        display: inline-block;
+    .logo_mb{
+            display: none;
     }
     
-      .wrap{
-       margin: 0 628px 0 87px; 
+    .icon{
+        display: block;
+        margin-top: 35px;
+    }
+    
+      .wrapper{
+        max-width: 834px;
+        margin: 0 auto; 
     }
     
      .contacts-block1{
-        margin: 0 124px 72px 94px;
+        max-width: 834px;
+        margin: 72px auto; 
     }
     
     .contacts-block2{
-        margin: 0 124px 72px 94px;
+        max-width: 834px;
+        margin: 0 auto; 
     }
     
     
@@ -223,11 +281,14 @@
 @media screen and (max-width: 375px)  {
         
         .header-nav{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
-            width: 311px;
-            height: 27px;
-            margin: 32px 32px 0 32px;
+            max-width: 295px;
+            margin: 0 auto;
         } 
     
     
@@ -235,23 +296,28 @@
             display: none;
         }
     
-        .logo-mb2{
+        .logo_mb{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            width: 83px;
-            height: 27px;
-            margin-right: 180px;
+            margin-right: 204px;
+            margin-top: 32px;
         }
     
         .icon{;
-            margin-bottom: 70px;
+            margin: 0;
+            width: 24px;
+            height: 18px
          }
         
         .menu{
             padding: 0;
+            margin-top: -20px;
         }
         
-        .wrap{
-            margin: 0 32px 0 32px;
+        .wrapper{
+            max-width: 301px;
+            margin: 0 auto;
         }
 
         .title{
@@ -284,22 +350,39 @@
             margin-bottom: 32px;
         }
         .contacts-block1{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
-            margin: 0 32px 32px 32px;
+            max-width: 301px;
+            margin: 0 auto;
         }
             .contacts-block2{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
-            margin: 0 32px 32px 32px;
+            max-width: 301px;
+            margin: 0 auto;
         }
     
         .block-text_position{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
         }
         
-        .text-color__position{
+        .text-color_position{
             margin: 0;
         }
 } 

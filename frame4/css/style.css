@@ -1,9 +1,26 @@
-*{
-    margin: 0;
+@font-face{
+    font-family: "Circe";
+    src: url(/font/Circe-Light.eot) format("eot"), 
+         url(/font/Circe-Light.woff) format("woff"),
+         url(/font/Circe-Light.ttf) format("truetype"),
+         url(/font/Circe-Light.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Circe-Bold";
+    src: url(/font/Circe-Bold.eot) format("eot"), 
+         url(/font/Circe-Bold.woff) format("woff"),
+         url(/font/Circe-Bold.ttf) format("truetype"),
+         url(/font/Circe-Bold.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
 }
 
 
-.title{
+.title_1{
+    font-family: "Circe-Bold";
     width: 218px;
     height: 107px;
     font-size: 72px;
@@ -12,8 +29,8 @@
     margin-bottom: 40px;
 }
 
-.title__h3{
-    font-family: Circe;
+.title__3{
+        font-family: "Circe-Bold";;
     line-height: normal;
     font-size: 28px;
     letter-spacing: -0.01em;
@@ -21,13 +38,15 @@
     margin-bottom: 24px;
 }
 
-
-.header{}
-
 .header-nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 158px;
+    white-space: nowrap;
 }
 
 .logo{
@@ -35,18 +54,24 @@
     margin-top:58px;
 }
 
-.logo-mb{
+.logo_mb{
     display: none;
 }
 
 
 .menu{      
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
-    align-items:flex-end;
-    height: 100px;
-    list-style-type: none;
     padding: 0;
+    -webkit-box-align:end;
+    -ms-flex-align:end;
+    align-items:flex-end;
+    height: 79px;
+    list-style-type: none; 
 }
 
 .menu__item{}
@@ -55,7 +80,7 @@
     color: #4781ED;
     text-decoration: none;
     margin: 0 58px;
-    font-family: sans-serif;/*поменять*/
+    font-family: "Circe-Bold";
     font-weight: bold;
     line-height: normal;
     font-size: 15px;
@@ -67,7 +92,7 @@
     text-decoration: none;
     color:#2E2E2E;
     margin: 0 58px;
-    font-family: sans-serif;/*поменять*/
+    font-family: "Circe-Bold";
     font-weight: bold;
     line-height: normal;
     font-size: 15px;
@@ -77,15 +102,12 @@
 }
 
 .menu__link_radius{
-    border:1px solid #4781ED;
-    border-radius: 90px;
+    border-radius: 100%;
     color:white;
     background: #4781ED;
-    padding: 18px;
-   
-    
+    padding : 18px 18px;
+    margin: 0 100px 0 0  
 }
-
 /* Начала burger-menu */
 
 .icon{
@@ -93,35 +115,42 @@
     width: 32px;
     height: 25px;
     position: relative;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
     cursor: pointer;
 }
 
 .icon .span{
     display: block;
     position: absolute;
-    height:.3vh;
+    height:3px;
     width: 100%;
     background:#2E2E2E;
     left: 0;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: .25s ;
     transition: .25s ;
 }
 
 .icon .sp1{
-    top:0px;
+    top:0;
+    -webkit-transform-origin: left center;
     transform-origin: left center;
 }
 
 .icon .sp2{
     top:9px;
+    -webkit-transform-origin: left center;  
     transform-origin: left center;
 }
 
 .icon .sp3{
   top: 18px;
-  transform-origin: left center;
+  -webkit-transform-origin: left center;
+    transform-origin: left center;
 }
 
 /* конец burger-menu */
@@ -130,9 +159,9 @@
 
 .page{}
 
-.wrap{
-    max-width: 1920px;
-    margin: 0 360px 196px 360px; 
+.wrapper{
+ margin: 0 auto;
+ max-width: 1200px;
 }
 
 .services{} 
@@ -146,62 +175,71 @@
 .menu-block__item{
     margin-bottom: 16px;
     list-style-image: url(/frame4/img/def.jpg);
-    font-family: Circe;
+    font-family: "Circe";
     line-height: 33px;
     font-size: 21px;
 }
 
-.footer-page{}
+.footer_page{
+        position: absolute;
+        left: 0;
+        right: 0;
+}
 
-.info{ 
-    width:1920px;
+.info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 222px;
     background: #333333;
 
 }
 
 .info-menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
-    height: 48px;
-    margin: 87px 360px 87px 360px;
-    
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0;
 }
 
 
 .info-menu__item{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items:flex-start; /* 1)259w    2)202w    230w */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 104px;
     height:48px;
-    margin-right: 100px;
     list-style-type: none;
     line-height: 22px;
     font-size: 18px;
-    font-family: cursive;
-    margin-top:87px;
-    margin-bottom: 87px;
+    font-family: "Circe";
 }
 
 .info-menu__icon{
-   margin-right: 20px;
-    margin-bottom:0;
+    margin-right: 20px;
 }
 
 .info-menu__text{
-    width: 100%;
-    height: 100%;
     color: white;
 }
 .info-menu__phone{
-    display: flex;
-    align-items: center;
     width: 144px;
-    margin-bottom: 30px
 }
 
 .info-menu__copyright{
-    margin-left: -40px;
-    width: 166px;
+    width: 180px;
     height: 45px;
     line-height: 15px;
     font-size: 12px;
@@ -214,15 +252,13 @@
     .title{
         margin-bottom: 40px;
     }
-    .logo-mb2{
+    .logo_mb{
         display: none;
     }
-    .wrap{
-       margin: 0 238px 0 180px; 
-    }
-    
-    .block-info{
-        margin-left: 133px;
+    .wrapper{
+       max-width: 1064px;
+       margin: 0 auto;
+       margin-bottom: 196px;
     }
     
     .info{
@@ -230,7 +266,8 @@
     }
     
     .info-menu{
-        margin: 196px 180px 90px 137px;
+       max-width: 1064px;
+       margin: 0 auto;
     }
     
     .info-menu__item{
@@ -247,16 +284,26 @@
 @media screen and (max-width: 1024px) {
     
     .header-nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
-        width: 90%;
-        margin: 87px 92px 148px 29px;
+        max-width: 824px;
+        margin: 0 auto;
+        margin-bottom: 148px;
     }    
     
     .menu__item{
         display: none;
     }
-    .logo-mb2{
+    
+    .logo{
+        margin-left: 0;
+    }
+    
+    .logo_mb{
         display: none;
     }
     
@@ -264,34 +311,41 @@
         display: block;
     }
     
-      .wrap{
-       margin: 0 92px 0 72px; 
+      .wrapper{
+        max-width: 824px;
+        margin: 0 auto;  
     }
+    
+    
     .info{ 
         width: 100%;
-        height: 222px;
+        height: 258px;
     }
 
      
     .info-menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        margin: 196px 0 41px 29px;
+        max-width: 890px;
+        margin: 0 auto; 
     }
     
     .info-menu__item{
+        max-width: 259px;
         margin: 0 auto;
-        width: 233px;
-        margin-right: 60px;
-        margin-top: 37px;
+        margin-top: 77px;
     }
     
     .info-menu__item_copyright{
-        margin-right: 400px;
+        margin: 40px auto;
     }
     
     .info-menu__copyright{
         text-align: center;
+        margin: 0;
     }
 
     
@@ -300,11 +354,14 @@
 @media screen and (max-width: 375px)  { 
         
         .header-nav{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-pack: distribute;
             justify-content: space-around;
-            width: 311px;
-            height: 27px;
-            margin: 32px 32px 79px 32px;
+            max-width: 295px;
+            margin: 0 auto;
+            margin-top: 32px;
         } 
     
     
@@ -312,7 +369,7 @@
             display: none;
         }
     
-        .logo-mb{
+        .logo_mb{
             display: block;
             width: 83px;
             height: 27px;
@@ -320,15 +377,20 @@
         }
     
         .icon{;
-            margin-bottom: 70px;
+            margin-bottom: 49px;
+            width: 24px;
+            height: 18px
          }
         
         .menu{
             padding: 0;
+            margin: 0;
         }
         
-        .wrap{
-            margin: 0 32px 0 32px;
+        .wrapper{
+            max-width: 295px;
+            margin: 0 auto;
+            margin-top: -40px;
         }
 
         .title{
@@ -360,33 +422,33 @@
     }
     
     .info{ 
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
         height: 435px;
-        margin-top: 154px;
+        margin-top: 114px;
     }
 
     .info-menu{
-        padding: 0;
-        width: 259px;
+        max-width: 295px;
+        margin: 44px auto;
         height: 315px;
-        margin: 48px 84px 70px 32px;
+        
     }
 
 
     .info-menu__item{
-        display:flex;
-        width: 259px;
         height:48px;
         margin: 0;
     }
 
     .info-menu__copyright{
-        margin-left: 4px;
-        width: 180px;
-        height: 45px;
-        margin-top: 36px;
+        margin-top: 66px;
         text-align: left;
         color: rgba(255, 255, 255, 0.45);
     }
